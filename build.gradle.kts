@@ -31,6 +31,11 @@ dependencies {
     implementation("io.quarkus:quarkus-hibernate-orm-panache")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
+
+    implementation("org.apache.tika:tika-core:2.4.1")
+    implementation("org.apache.tika:tika-langdetect-optimaize:2.4.1")
+
+
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }
@@ -41,15 +46,6 @@ version = "1.0-SNAPSHOT"
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
-}
-
-compileJava {
-    options.encoding = 'UTF-8'
-    options.compilerArgs << '-parameters'
-}
-
-compileTestJava {
-    options.encoding = 'UTF-8'
 }
 
 
